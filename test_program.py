@@ -3,7 +3,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 dir_files = [filename.lower() for filename in os.listdir(BASE_DIR)]
 
-files_list = ['program.py', 'readme.md']
+files_list = ['homework.py', 'readme.md']
 
 
 def test_program():
@@ -11,10 +11,10 @@ def test_program():
         assert filename in dir_files, f'Файл `{filename}` не найден в корне репозитория'
 
     try:
-        import program
+        import homework
     except Exception as e:
         assert False, (
-            'Не удалось запустить `program.py`. '
+            'Не удалось запустить `homework.py`. '
             'Исправьте в нем ошибки:\n'
             f'{e}'
         )
